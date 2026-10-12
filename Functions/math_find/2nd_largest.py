@@ -14,7 +14,9 @@ def largest(list:list,len:int):
 #//////////////////////////////////    
 numbers = [55, 35, 1, 10, 34, 1, 99]
 print("\n")
+print("The numbers in the list are:\n")
 Print(numbers)
+print("The largest number in the list is:\n")
 largest(numbers,len(numbers))
 print("\n")
 

@@ -1,5 +1,6 @@
 def sum_numbers(*args):
     return sum(args)
 print("\n")
-print(sum_numbers(1, 2, 3, 4)) # Returns 10
+print("Arbitrary Arguments sum_numbers(10, 20, 30, 40)\n")
+print(sum_numbers(10, 20, 30, 40)) # Returns 100
 print("\n")

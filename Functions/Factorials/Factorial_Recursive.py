@@ -11,7 +11,7 @@ def factorial_recursive(n):
         return 1
     # Recursive case
     return n * factorial_recursive(n - 1)
-
+print("Factorial of 5 using recursive method:\n")
 print(factorial_recursive(5))  # Output: 120
 
 ################################################################
