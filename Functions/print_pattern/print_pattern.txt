@@ -1,0 +1,97 @@
+To print patterns in Python, you primarily use nested for loops where the outer loop manages the rows and the inner loop
+ manages the columns.
+ Here are the four most common patterns implemented in Python using guides from sources like GeeksforGeeks and PyNative.
+ 
+ 
+ 1. Right-Angled Triangle (Stars)This pattern adds one extra star to each subsequent line.
+  The end=" " argument keeps the prints on the same line, while the empty print() breaks to the next line.
+  
+  
+  python 
+  rows = 5
+for i in range(1, rows + 1):
+    for j in range(1, i + 1):
+        print("*", end=" ")
+    print()
+
+Output:
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+
+
+2. Inverted Right-Angled Triangle (Stars)
+To reverse the shape, configure the outer loop to step backward. 
+The range starts at the total rows and decrements by -1 on each iteration.
+
+python 
+rows = 5
+for i in range(rows, 0, -1):
+    for j in range(0, i):
+        print("*", end=" ")
+    print()
+
+Output:
+
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+
+
+3. Number Pyramid
+This structure prints matching numbers horizontally across each row. The value printed corresponds exactly to the current 
+row index.
+
+python
+
+rows = 5
+for i in range(1, rows + 1):
+    for j in range(1, i + 1):
+        print(i, end=" ")
+    print()
+
+Output:
+
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+5 5 5 5 5 
+
+
+4. Full Equilateral Pyramid
+Creating a centered pyramid requires math to calculate leading spaces before rendering the stars.
+ Alternatively, you can use Python's string multiplication feature to simplify the logic:
+ 
+ 
+
+ python
+rows = 5
+
+for i in range(1, rows + 1):
+    # Print leading spaces, then print the stars
+    print(" " * (rows - i) + "* " * i)
+
+Output:   
+
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+
+💡 Core Mechanics to Remember
+
+range(start, stop, step): 
+Controls the counting sequence for your loops.
+
+end=" ":
+ Overrides Python's default behavior of adding a newline after every single print() statement.
+
+print():
+ Executed in the outer loop to cleanly reset the cursor to a new line after a row finishes printing.

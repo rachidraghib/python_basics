@@ -1,0 +1,61 @@
+in Python, break exits the loop entirely, while continue skips only the current iteration and
+jumps to the next cycle of the loop. Both are used to control the flow of for and while loops 
+based on specific conditions.
+///////////////////////////
+Key Differences At a Glance
+//////////////////////////
+
+*** break feature
+
+Primary Action:
+Terminated the loop completely.
+
+Next Execution Step:
+Moves to the first line after the loop.
+
+Remaining Iterations:
+Completely aborted.
+
+*** continue feature
+
+Primary Action:
+Skips remaining code in current loop cycle.
+
+Next Execution Step:
+Jumps back to the top of the loop for the next item.
+
+Remaining Iterations:
+Executed as normal.
+
+for num in range(1, 6):
+    if num == 3:
+        break
+    print(num)
+
+# Output:
+# 1
+# 2
+
+
+# 
+ Why? When num became 3, the break triggered. The entire loop ended immediately, so 3, 4, 
+ and 5 were never processed.The continue StatementUse continue when you want to ignore a 
+ specific item but keep processing the rest of the sequence.
+
+ python
+ 
+ for num in range(1, 6):
+    if num == 3:
+        continue
+    print(num)
+
+# Output:
+# 1
+# 2
+# 4
+# 5
+Why? When num became 3, continue skipped the print(num) line and jumped straight back to 
+the top of the loop for the next number (4).
+Bonus: What about pass?People often confuse break and continue with pass.
+pass does absolutely nothing.It is just a temporary placeholder used to prevent syntax errors
+when a code block is required but you haven't written the logic yet.

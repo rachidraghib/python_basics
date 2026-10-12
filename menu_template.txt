@@ -1,0 +1,35 @@
+def show_menu():
+    print("\n\t\t\t\tMAIN MENU")
+    print("\t\t\t0. Choice 0")
+    print("\t\t\t1. Choice 1")
+    print("\t\t\t2. Choice 2")
+    print("\t\t\t3. Choice 3")
+    print("\t\t\t4. Choice 4")
+    print("\t\t\t5. Choice 5")
+    print("\t\t\t6. Choice 6")
+    print("\t\t\t7. Choice 7")
+
+
+def switch(choice):
+    if choice==0:
+        return print()
+    elif choice==1:
+        return append()
+    elif choice==2:
+        return insert()
+    elif choice==3:
+        return extend()
+    elif choice==4:
+        return remove()
+    elif choice==5:
+        return pop()
+    elif choice==6:
+            return reverse()
+    elif choice==7:
+                return remove()
+        
+    
+nl="\n"
+show_menu()
+choice=int(input("\nEnter your choice: "))
+print(switch(choice))

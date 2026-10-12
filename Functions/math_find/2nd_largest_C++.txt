@@ -1,0 +1,103 @@
+#include<iostream>
+#include <iomanip>
+using namespace std;
+void show_numbers(int numbers[],int size){
+    cout<<" ";
+    for (int i=0;i<size;i++){
+        cout<<numbers[i]<<" ";
+    }
+    cout<<endl<<endl;
+}
+void show_highest(int numbers[],int size){
+    cout<<" ";
+    int highest=numbers[0];
+    for (int i=1;i<size;i++){
+        if (numbers[i]>highest){
+            highest=numbers[i];
+        }
+        continue;
+
+    }
+    cout<<highest;
+}
+void show_lowest(int numbers[],int size){
+    cout<<" ";
+    int lowest=numbers[0];
+    for (int i=1;i<size;i++){
+        if (numbers[i]<lowest){
+            lowest=numbers[i];
+        }
+        continue;
+
+    }
+    cout<<lowest<<endl;
+}
+void show_2nd_highest(int numbers[],int size){
+    cout<<" ";
+    int first=numbers[0];
+    int second=numbers[1];
+    for (int i=0;i<size;i++){
+        if (numbers[i]>first){
+           second=first;
+           first=numbers[i];
+        }
+        
+        else if (numbers[i]>second && numbers[i]<first)
+        {
+
+        second=numbers[i];   
+        }
+        
+
+    }
+    cout<<second;
+}
+void show_2nd_lowest(int numbers[],int size){
+    cout<<" ";
+    int first=numbers[0];
+    int second=numbers[1];
+    for (int i=1;i<size;i++){
+        if (numbers[i]<first){
+            second=first;
+           first=numbers[i];
+        
+    
+        }
+            
+        
+        else if (numbers[i]<second && numbers[i]>first){
+            second=numbers[i];
+    
+        }
+        
+        
+
+    }
+    cout<<second<<endl<<endl;;
+}
+
+int main(){
+    int *integers_ptr=nullptr;
+    int i,size;
+
+   cout<<"\nEnter the size of the integer array you wish to procced: ";
+   cin>>size;
+   integers_ptr=new int(size);
+   cout<<"\nEnter "<<size<<" integers below to determine the second largest integer\n";
+   for ( i=0;i<size;i++){
+    cout<<"\nInteger "<<i+1<<" :";
+    cin>>integers_ptr[i];
+   } 
+   cout<<"\nArray Elements: "; show_numbers(integers_ptr,size);
+   cout<<"\nSecond Highest Element is: "; show_2nd_highest(integers_ptr,size);
+   cout<<"\nSecond Lowest Element is: "; show_2nd_lowest(integers_ptr,size);
+   cout<<"\nHighest Element is: "; show_highest(integers_ptr,size);
+   cout<<"\nLowest  Element is: "; show_lowest(integers_ptr,size);
+   
+   
+    
+
+    delete[] integers_ptr;
+    integers_ptr=nullptr; 
+    return 0;
+}

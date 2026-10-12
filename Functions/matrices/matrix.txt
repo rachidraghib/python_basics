@@ -1,0 +1,14 @@
+in Python, matrices are best implemented using numpy.array from the NumPy Library for 
+high-performance calculations, or native nested lists for simple, dependency-free tasks.
+(Note: The legacy numpy.matrix class is deprecated and should not be used).
+Comparison: NumPy Arrays vs. Nested ListsFeature
+NumPy Array (np.array)Native Python Nested List
+PerformanceExtremely fast (C-optimized memory)Slower (overhead from Python objects)MultiplicationMatrix product via @ or element-wise via *Requires manual loops or list comprehensionsDependenciesRequires pip install numpyBuilt-in (no installation needed)SlicingPowerful 2D slicing (matrix[:2, 1:3])Limited to 1D row slicing (matrix[0])Using NumPy (Recommended)Install it first via your terminal using pip install numpy.1. Creation and Basicspythonimport numpy as np
+
+# Create a 2x3 matrix
+matrix = np.array([[1, 2, 3], [4, 5, 6]])
+
+# Quick initialization tricks
+zeros = np.zeros((3, 3))       # 3x3 matrix of zeros
+identity = np.eye(3)          # 3x3 identity matrix
+random_mat = np.random.rand(2, 2) # 2x2 matrix with random floats
